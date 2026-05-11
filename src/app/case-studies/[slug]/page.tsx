@@ -46,7 +46,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
   return (
     <Container className="pb-24 pt-12 md:pt-16">
       <div className="space-y-10">
-        <div className="space-y-6 rounded-[2.5rem] border border-black/5 bg-white/85 p-8 shadow-soft md:p-10">
+        <div className="space-y-6 rounded-xl border border-line bg-surface p-8 shadow-soft md:p-10">
           <div className="flex flex-wrap gap-3">
             <Badge>{study.industry}</Badge>
             <Badge>{study.timeline}</Badge>
@@ -58,7 +58,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {study.results.map((result) => (
-              <div key={result.label} className="rounded-[1.75rem] bg-sand/35 p-5">
+              <div key={result.label} className="rounded-md bg-sand p-5">
                 <p className="font-display text-4xl tracking-tight text-ink">{result.value}</p>
                 <p className="mt-2 text-xs uppercase tracking-[0.2em] text-muted">{result.label}</p>
                 <p className="mt-3 text-sm leading-6 text-muted">{result.context}</p>
@@ -68,7 +68,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <section className="rounded-[2rem] border border-black/5 bg-white/80 p-7 shadow-soft">
+          <section className="rounded-lg border border-line bg-surface p-7 shadow-soft">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Problem</p>
             <div className="mt-5 space-y-4">
               {study.problem.map((entry) => (
@@ -79,7 +79,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
             </div>
           </section>
 
-          <section className="rounded-[2rem] border border-black/5 bg-white/80 p-7 shadow-soft">
+          <section className="rounded-lg border border-line bg-surface p-7 shadow-soft">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Approach</p>
             <div className="mt-5 space-y-4">
               {study.approach.map((entry) => (
@@ -91,15 +91,15 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
           </section>
         </div>
 
-        <section className="rounded-[2.5rem] border border-black/5 bg-[#fff7ef] p-8 shadow-soft">
+        <section className="rounded-xl border border-line bg-ink p-8 text-onInk shadow-soft">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-2xl space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Technical Decisions</p>
-              <h2 className="font-display text-3xl tracking-tight text-ink">Why the implementation choices mattered</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-onInk-muted">Technical Decisions</p>
+              <h2 className="font-display text-3xl tracking-tight text-onInk">Why the implementation choices mattered</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {study.stack.map((item) => (
-                <span key={item} className="rounded-full border border-black/10 bg-white/80 px-3 py-1 text-xs uppercase tracking-[0.16em] text-muted">
+                <span key={item} className="rounded-full border border-onInk-line bg-onInk-surface px-3 py-1 text-xs uppercase tracking-[0.16em] text-onInk-muted">
                   {item}
                 </span>
               ))}
@@ -107,9 +107,9 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
           </div>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {study.technicalDecisions.map((decision) => (
-              <article key={decision.title} className="rounded-[1.75rem] bg-white p-5">
-                <h3 className="font-display text-2xl tracking-tight text-ink">{decision.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{decision.detail}</p>
+              <article key={decision.title} className="rounded-md border border-onInk-line bg-onInk-surface p-5">
+                <h3 className="font-display text-2xl tracking-tight text-onInk">{decision.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-onInk-muted">{decision.detail}</p>
               </article>
             ))}
           </div>

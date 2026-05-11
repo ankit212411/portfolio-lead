@@ -20,7 +20,7 @@ export const products: Product[] = [
     ],
     useCases: ["Travel capsule wardrobe", "Commute layering", "All-season transitional outerwear"],
     recommendations: ["atlas-knit-polo", "summit-trail-pack"],
-    accent: { from: "#1a5f58", to: "#9fd7c9", ink: "#e7fff8" },
+    accent: { from: "#111817", to: "#4f6f67", ink: "#f7fffb" },
     featured: true
   },
   {
@@ -42,7 +42,7 @@ export const products: Product[] = [
     ],
     useCases: ["Smart casual wardrobe", "Layering piece", "Day-to-night styling"],
     recommendations: ["harbor-tapered-chino", "aurora-performance-jacket"],
-    accent: { from: "#8b4f2d", to: "#f1c8a1", ink: "#fff4e7" },
+    accent: { from: "#2b241f", to: "#9d8b78", ink: "#fff8ef" },
     featured: true
   },
   {
@@ -64,7 +64,7 @@ export const products: Product[] = [
     ],
     useCases: ["Daily uniform", "Travel packing", "Hybrid office wear"],
     recommendations: ["atlas-knit-polo", "ridge-everyday-tee"],
-    accent: { from: "#2f4a74", to: "#a9c2ef", ink: "#eef5ff" },
+    accent: { from: "#18212d", to: "#74869e", ink: "#f4f8ff" },
     featured: true
   },
   {
@@ -86,7 +86,7 @@ export const products: Product[] = [
     ],
     useCases: ["Daily commute", "Weekend city trip", "Personal item carry"],
     recommendations: ["aurora-performance-jacket", "ridge-everyday-tee"],
-    accent: { from: "#334b2c", to: "#b7d7aa", ink: "#f2ffec" }
+    accent: { from: "#172019", to: "#75806c", ink: "#f6fff1" }
   },
   {
     slug: "ridge-everyday-tee",
@@ -107,7 +107,7 @@ export const products: Product[] = [
     ],
     useCases: ["Core basics", "Layering piece", "Multi-buy staple"],
     recommendations: ["harbor-tapered-chino", "summit-trail-pack"],
-    accent: { from: "#5b4e62", to: "#d7c6e2", ink: "#fbf5ff" }
+    accent: { from: "#26232a", to: "#8c8794", ink: "#fbf7ff" }
   },
   {
     slug: "field-day-cap",
@@ -128,6 +128,6 @@ export const products: Product[] = [
     ],
     useCases: ["Everyday accessory", "Travel styling", "Impulse add-on"],
     recommendations: ["ridge-everyday-tee", "summit-trail-pack"],
-    accent: { from: "#74443d", to: "#f0bda9", ink: "#fff1eb" }
+    accent: { from: "#2f2725", to: "#9a8178", ink: "#fff6f2" }
   }
 ];

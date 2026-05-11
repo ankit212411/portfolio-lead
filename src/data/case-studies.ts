@@ -2,167 +2,176 @@ import type { CaseStudy } from "@/types";
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "ecommerce-storefront-scaling",
-    title: "Ecommerce Storefront Scaling",
+    slug: "sfra-migration-solutions",
+    title: "SFRA Migration Solutions for an Education Commerce Platform",
     summary:
-      "Re-architected a multi-brand storefront to handle peak traffic, merchandising complexity, and faster release cycles without compromising Core Web Vitals.",
-    client: "DTC Retail Group",
-    industry: "Ecommerce",
-    timeline: "6 months",
-    role: "Frontend Lead / Architect",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Contentful", "Vercel"],
+      "Migrated static AEM commerce journeys to Salesforce Commerce Cloud SFRA, adding configurable subscription terms, upsell recommendations, checkout improvements, and partially automated order processing.",
+    client: "Global Publishing & Education Provider",
+    industry: "Education Ecommerce",
+    timeline: "Enterprise SFRA migration",
+    role: "Technical Lead / SFCC Frontend Engineer",
+    stack: ["SFCC", "SFRA", "Business Manager", "JavaScript", "TypeScript", "jQuery", "Git"],
     problem: [
-      "The storefront had grown into a tightly coupled codebase where every campaign launch touched shared templates and increased regression risk.",
-      "Traffic spikes during seasonal drops caused slow category pages, hydration bottlenecks, and unstable UX on mobile devices.",
-      "Merchandising teams needed faster landing page assembly, but the current implementation required engineering involvement for minor content changes."
+      "The education business relied on static AEM pages that made product configuration, dynamic content, and enhancements slow because many updates required code changes.",
+      "Subscription ordering needed stronger ecommerce capabilities, including configurable print and digital terms, clearer order data, and fewer manual customer-care steps.",
+      "The business needed a future-ready SFCC/SFRA storefront that could support promotions, recommendations, checkout options, and operational transparency."
     ],
     approach: [
-      "Split the storefront into modular route segments and domain-driven UI slices so listing, product, and editorial surfaces could evolve independently.",
-      "Introduced typed content contracts and shared section primitives to reduce branching logic between brands and campaign variants.",
-      "Focused on cache strategy, route-level static generation, and selective client interactivity to keep the default experience server-first."
+      "Implemented SFRA storefront journeys that preserved the customer path while moving commerce management into Salesforce Commerce Cloud.",
+      "Built custom cart and checkout functionality for full and half subscription terms, single or multi-item shipping, and improved promotional visibility.",
+      "Added intermediate upsell logic and recommendation patterns so merchandising could improve discovery without creating friction in the buying path."
     ],
     technicalDecisions: [
       {
-        title: "Server-first composition",
+        title: "SFRA as the commerce foundation",
         detail:
-          "Moved merchandising layouts and product listing assembly into server components so the client only hydrated the parts that genuinely required interaction."
+          "Used Salesforce Storefront Reference Architecture to replace static AEM experiences with configurable commerce capabilities and stronger merchant control."
       },
       {
-        title: "Segmented UI ownership",
+        title: "Custom subscription checkout",
         detail:
-          "Established shared foundations for cards, pricing, badges, and grid layouts while keeping domain-specific modules isolated to avoid platform-wide regressions."
+          "Extended cart and checkout behavior to support education-specific subscription terms, shipment scenarios, teacher data, and school information."
       },
       {
-        title: "Progressive enhancement for conversion UI",
+        title: "Operational automation",
         detail:
-          "Kept add-to-cart, recommendations, and promo logic behind focused client boundaries rather than hydrating full templates."
+          "Reduced manual order verification by locating existing teacher and school records and allowing eligible single-shipment orders to move forward automatically."
       }
     ],
     results: [
       {
-        label: "Mobile LCP",
-        value: "-34%",
-        context: "Improved average mobile largest contentful paint across high-traffic category pages."
+        label: "Search visibility",
+        value: "#1",
+        context:
+          "The published SFRA migration case study ranked number one on Google for 3 of the past 10 weeks for SFRA migration solutions."
       },
       {
-        label: "Release throughput",
-        value: "+45%",
-        context: "Reduced engineering effort for campaign launches through reusable merchandising sections."
+        label: "Top 10 presence",
+        value: "9/10 weeks",
+        context:
+          "The case study stayed in the top 10 for 9 of the past 10 weeks, supporting thought leadership around SFRA migration solutions."
       },
       {
-        label: "Conversion uplift",
-        value: "+11%",
-        context: "Improved add-to-cart rate after simplifying listing interactions and reducing layout shifts."
+        label: "Order operations",
+        value: "Partially automated",
+        context:
+          "Reduced customer-care burden by automating valid single-shipment order flows and making order data easier to review."
       }
     ]
   },
   {
-    slug: "frontend-architecture-design",
-    title: "Frontend Architecture Design",
+    slug: "headless-sfcc-nextjs-storefront",
+    title: "Headless SFCC Storefront with React and Next.js",
     summary:
-      "Defined a scalable frontend architecture for a SaaS platform spanning admin tools, customer workflows, and embedded partner experiences.",
-    client: "B2B SaaS Platform",
-    industry: "SaaS",
-    timeline: "4 months",
-    role: "Frontend Lead / Platform Owner",
-    stack: ["Next.js", "React", "TypeScript", "Storybook", "TanStack Query", "Node.js"],
+      "Led frontend delivery for a headless ecommerce storefront on Salesforce Commerce Cloud, combining Next.js, React, Tailwind CSS, SLAS authentication, Shopper APIs, and reusable UI architecture.",
+    client: "Auvira Storefront",
+    industry: "Headless Commerce",
+    timeline: "Nov 2025 - Jan 2026",
+    role: "Technical Lead",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SFCC", "SLAS", "Shopper APIs", "Jest"],
     problem: [
-      "Teams were shipping features quickly, but the product surface had inconsistent state patterns, duplicated UI logic, and weak boundaries between app domains.",
-      "Onboarding new engineers was slow because architecture decisions lived in tribal knowledge rather than code structure and conventions.",
-      "Design system adoption stalled because teams were forced into either rigid components or one-off local implementations."
+      "The storefront needed a modern headless frontend on top of SFCC while preserving core commerce behavior for product discovery, pricing, promotions, cart, and checkout.",
+      "Authenticated shopper flows required secure login, logout, profile navigation, token handling, session persistence, and strong edge-case behavior.",
+      "The team needed maintainable engineering standards so multiple developers could ship against SFCC data contracts without creating inconsistent frontend patterns."
     ],
     approach: [
-      "Created a layered architecture with clear separation between app routes, feature modules, shared UI foundations, and service adapters.",
-      "Defined a pragmatic composition model: server-rendered data shells, colocated feature logic, and narrowly scoped client interactivity.",
-      "Documented conventions through examples, starter modules, and review checklists so engineering quality became teachable and repeatable."
+      "Built the frontend with React, Next.js, TypeScript, and Tailwind CSS, emphasizing reusable components, typed patterns, and predictable route structure.",
+      "Integrated SFCC Shopper Login and API Access Service for authenticated user flows, token persistence, and profile menu interactions.",
+      "Aligned with SFCC backend and OCAPI teams on catalog, pricing, promotion, inventory, customer, cart, and checkout data contracts."
     ],
     technicalDecisions: [
       {
-        title: "Feature-sliced ownership",
+        title: "Typed component architecture",
         detail:
-          "Organized product areas around business capabilities rather than file types, which improved discoverability and reduced cross-team collisions."
+          "Established reusable components, hooks, utilities, folder conventions, and TypeScript patterns to keep the storefront scalable and easier to onboard."
       },
       {
-        title: "Design system as a foundation layer",
+        title: "Focused auth boundaries",
         detail:
-          "Kept primitives intentionally small, with typed variants and composition hooks, so teams could move quickly without forking the visual system."
+          "Isolated authenticated UI and SLAS token handling so shopper session concerns did not leak across unrelated storefront components."
       },
       {
-        title: "Operational quality baked in",
+        title: "Commerce API resilience",
         detail:
-          "Added linting standards, route-level metadata patterns, and data-loading conventions early to prevent entropy as teams scaled."
+          "Handled expired sessions, token refresh, partial API failures, empty states, and shopper edge cases to protect the buying journey."
       }
     ],
     results: [
       {
-        label: "Onboarding time",
-        value: "-40%",
-        context: "New frontend engineers reached productive contribution faster through clearer structure and examples."
+        label: "Architecture",
+        value: "Headless",
+        context:
+          "Delivered a React and Next.js storefront architecture on SFCC with reusable UI foundations and commerce API integration."
       },
       {
-        label: "Shared UI reuse",
-        value: "68%",
-        context: "Measured increase in shared component adoption across high-frequency workflow surfaces."
+        label: "Auth flows",
+        value: "SLAS-ready",
+        context:
+          "Implemented secure authenticated shopper experiences with token handling, session persistence, and profile navigation."
       },
       {
-        label: "Delivery confidence",
-        value: "+30%",
-        context: "Teams reported fewer late-stage regressions after moving to clearer boundaries and ownership."
+        label: "Team quality",
+        value: "Standards set",
+        context:
+          "Defined linting, TypeScript, folder, hook, and utility conventions to improve code quality and onboarding speed."
       }
     ]
   },
   {
-    slug: "performance-optimization",
-    title: "Performance Optimization",
+    slug: "global-commerce-experience-platform",
+    title: "Global Commerce Experience Platform",
     summary:
-      "Led a focused performance program for a mature web application where conversion was being constrained by heavy client bundles and interaction latency.",
-    client: "Subscription Commerce Brand",
-    industry: "Growth / Performance",
-    timeline: "10 weeks",
-    role: "Frontend Lead",
-    stack: ["Next.js", "React", "TypeScript", "Webpack", "Analytics", "A/B Testing"],
+      "Built and optimized SFCC storefront experiences across multi-locale ecommerce, Page Designer, analytics, privacy consent, and campaign-driven marketing modules.",
+    client: "MCM Worldwide",
+    industry: "Luxury Ecommerce",
+    timeline: "Oct 2024 - Present",
+    role: "Technical Lead",
+    stack: ["React", "JavaScript", "SFRA", "Page Designer", "GTM", "OneTrust", "HTML5", "CSS3"],
     problem: [
-      "The product had strong acquisition, but conversion dropped sharply on mobile due to slow startup, unnecessary JavaScript, and unstable rendering during checkout entry points.",
-      "Performance discussions were reactive because there was no shared measurement framework connecting engineering work to business impact.",
-      "Teams were hesitant to refactor because previous performance efforts traded maintainability for marginal gains."
+      "Global storefront teams needed reusable promotional widgets, product display modules, and dynamic marketing content that could support multi-locale ecommerce operations.",
+      "Analytics and privacy requirements had to be implemented without degrading storefront performance or slowing campaign delivery.",
+      "Business users needed more control over marketing pages and promotional content without requiring developers for every content update."
     ],
     approach: [
-      "Started with measurement: bundle analysis, route timings, interaction delays, and user funnel drop-offs tied to specific templates.",
-      "Prioritized the highest-impact wins first, including route-level code splitting, image strategy changes, and a stricter server-client boundary.",
-      "Introduced lightweight performance budgets and review prompts so gains would persist after the initial optimization project."
+      "Developed React-based UI components and SFCC Page Designer components for promotional widgets, product modules, and dynamic marketing experiences.",
+      "Implemented localization features across countries, languages, and currencies while coordinating with commerce APIs and third-party services.",
+      "Integrated Google Tag Manager and OneTrust consent management to support analytics, campaign tracking, and privacy compliance across regions."
     ],
     technicalDecisions: [
       {
-        title: "Client bundle containment",
+        title: "Business-editable modules",
         detail:
-          "Moved non-critical widgets behind dynamic imports and reduced shared bundle bloat by isolating feature-specific dependencies."
+          "Built Page Designer components so business teams could assemble dynamic marketing pages and promotional content without developer intervention."
       },
       {
-        title: "Render-path simplification",
+        title: "Analytics with consent control",
         detail:
-          "Collapsed redundant providers and memo-heavy abstractions that added complexity while still causing broad rerenders."
+          "Implemented GTM and OneTrust together so user behavior tracking and campaign measurement respected cookie consent requirements."
       },
       {
-        title: "Performance as a product metric",
+        title: "Performance-aware rendering",
         detail:
-          "Aligned performance work with commercial pages and funnel stages so teams could prioritize based on customer impact, not just Lighthouse deltas."
+          "Improved page load behavior through efficient component rendering, script management, and careful integration of marketing tools."
       }
     ],
     results: [
       {
-        label: "Initial JS payload",
-        value: "-28%",
-        context: "Reduced JavaScript shipped to key landing and PDP routes."
+        label: "Markets",
+        value: "Multi-locale",
+        context:
+          "Supported storefront experiences across different countries, languages, currencies, and regional business requirements."
       },
       {
-        label: "Mobile conversion",
-        value: "+8.6%",
-        context: "Lift in sessions reaching checkout after faster route startup and cleaner interaction flows."
+        label: "Marketing velocity",
+        value: "Improved",
+        context:
+          "Enabled business teams to publish dynamic campaign and promotional pages through reusable Page Designer components."
       },
       {
-        label: "INP",
-        value: "-37%",
-        context: "Improved interaction responsiveness on mobile merchandising pages."
+        label: "Compliance",
+        value: "GTM + OneTrust",
+        context:
+          "Connected analytics and consent management so campaign tracking could operate with stronger privacy controls."
       }
     ]
   }

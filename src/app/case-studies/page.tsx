@@ -7,7 +7,7 @@ import { caseStudies } from "@/data/case-studies";
 
 export const metadata: Metadata = {
   title: "Case Studies",
-  description: "Detailed frontend case studies covering ecommerce scaling, architecture, and performance optimization."
+  description: "Detailed case studies covering SFCC, SFRA migration, headless commerce, React, Next.js, analytics, and performance."
 };
 
 export default function CaseStudiesPage() {
@@ -16,8 +16,8 @@ export default function CaseStudiesPage() {
       <section className="space-y-10">
         <SectionIntro
           eyebrow="Case Studies"
-          title="Detailed examples of architecture, performance, and product delivery"
-          description="These pages are structured the way hiring managers and clients tend to skim: problem framing, solution approach, technical decisions, and credible outcomes."
+          title="Commerce case studies grounded in real SFCC and frontend delivery"
+          description="Structured for fast review: migration context, technical approach, implementation decisions, and credible results from enterprise ecommerce work."
         />
         <div className="grid gap-6 xl:grid-cols-3">
           {caseStudies.map((study) => (

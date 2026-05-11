@@ -59,7 +59,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <ProductPoster product={product} className="min-h-[28rem]" />
 
-          <div className="space-y-6 rounded-[2.5rem] border border-black/5 bg-white/85 p-8 shadow-soft">
+          <div className="space-y-6 rounded-xl border border-line bg-surface p-8 shadow-soft">
             <div className="flex flex-wrap gap-3">
               <Badge>{product.category}</Badge>
               <Badge>{product.inventoryStatus}</Badge>
@@ -68,7 +68,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               <h1 className="font-display text-4xl tracking-tight text-ink md:text-5xl">{product.name}</h1>
               <p className="text-lg leading-8 text-muted">{product.longDescription}</p>
             </div>
-            <div className="flex items-end justify-between gap-4 border-b border-black/5 pb-6">
+            <div className="flex items-end justify-between gap-4 border-b border-line pb-6">
               <div>
                 <p className="text-sm uppercase tracking-[0.18em] text-muted">Price</p>
                 <p className="font-display text-4xl tracking-tight text-ink">{formatCurrency(product.price)}</p>
@@ -80,7 +80,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {product.highlights.map((highlight) => (
-                <div key={highlight} className="rounded-[1.5rem] bg-sand/35 px-4 py-3 text-sm text-ink">
+                <div key={highlight} className="rounded-md bg-sand px-4 py-3 text-sm text-ink">
                   {highlight}
                 </div>
               ))}
@@ -98,19 +98,19 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </section>
 
         <section className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[2rem] border border-black/5 bg-white/80 p-7 shadow-soft">
+          <div className="rounded-lg border border-line bg-surface p-7 shadow-soft">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Use cases</p>
             <div className="mt-5 space-y-3">
               {product.useCases.map((entry) => (
-                <p key={entry} className="rounded-[1.5rem] bg-sand/35 px-4 py-3 text-sm leading-6 text-muted">
+                <p key={entry} className="rounded-md bg-sand px-4 py-3 text-sm leading-6 text-muted">
                   {entry}
                 </p>
               ))}
             </div>
           </div>
-          <div className="rounded-[2rem] border border-black/5 bg-white/80 p-7 shadow-soft">
+          <div className="rounded-lg border border-line bg-surface p-7 shadow-soft">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Specifications</p>
-            <div className="mt-5 divide-y divide-black/5">
+            <div className="mt-5 divide-y divide-line">
               {product.specifications.map((specification) => (
                 <div key={specification.label} className="flex items-center justify-between gap-4 py-4 text-sm">
                   <span className="text-muted">{specification.label}</span>

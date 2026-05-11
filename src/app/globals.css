@@ -3,15 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --canvas: #f7f3ec;
-  --surface: #fffaf4;
-  --line: rgba(24, 24, 23, 0.09);
-  --ink: #161916;
-  --muted: #625e58;
-  --accent: #127b67;
-  --accent-strong: #0d5d4f;
-  --accent-soft: #d8f1ea;
-  --sand: #e9decd;
+  color-scheme: light;
+  --canvas: #f5f6f1;
+  --surface: #ffffff;
+  --line: #dfe3dc;
+  --ink: #101312;
+  --muted: #626a66;
+  --accent: #b7f34d;
+  --accent-strong: #4e6800;
+  --accent-soft: #eefbda;
+  --sand: #ecefea;
+  --on-ink: #f7faf4;
+  --on-ink-muted: #b8c0b9;
+  --on-ink-line: rgba(255, 255, 255, 0.12);
+  --on-ink-surface: rgba(255, 255, 255, 0.06);
+  --grid: rgba(16, 19, 18, 0.04);
+  --shadow-soft: 0 18px 45px rgba(16, 19, 18, 0.08);
+  --shadow-crisp: 0 1px 0 rgba(16, 19, 18, 0.08);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0f1312;
+  --surface: #171c1a;
+  --line: #29302d;
+  --ink: #f4f7f2;
+  --muted: #a5aea8;
+  --accent: #b7f34d;
+  --accent-strong: #d4ff77;
+  --accent-soft: #26351a;
+  --sand: #202622;
+  --on-ink: #101312;
+  --on-ink-muted: #46504a;
+  --on-ink-line: rgba(16, 19, 18, 0.12);
+  --on-ink-surface: rgba(16, 19, 18, 0.06);
+  --grid: rgba(244, 247, 242, 0.055);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.32);
+  --shadow-crisp: 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -26,10 +54,12 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top right, rgba(18, 123, 103, 0.12), transparent 24rem),
-    radial-gradient(circle at left center, rgba(233, 222, 205, 0.7), transparent 26rem),
-    linear-gradient(180deg, #fbf7f1 0%, #f7f3ec 100%);
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--surface) 0%, var(--canvas) 44%, var(--surface) 100%);
+  background-size: 56px 56px, 56px 56px, auto;
   color: var(--ink);
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 a {
@@ -43,7 +73,7 @@ img {
 }
 
 ::selection {
-  background: rgba(18, 123, 103, 0.18);
+  background: rgba(183, 243, 77, 0.45);
 }
 
 @layer base {
@@ -56,5 +86,12 @@ img {
 
   p {
     text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .text-contained {
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 }

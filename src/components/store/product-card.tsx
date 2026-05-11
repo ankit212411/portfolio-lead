@@ -12,7 +12,7 @@ type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-black/5 bg-white/85 shadow-soft">
+    <article className="overflow-hidden rounded-lg border border-line bg-surface shadow-crisp transition duration-200 hover:-translate-y-0.5 hover:shadow-soft">
       <Link href={`/demo-store/${product.slug}`} className="block">
         <ProductPoster product={product} className="h-72 rounded-none border-0" />
       </Link>
@@ -32,7 +32,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="text-sm leading-6 text-muted">{product.description}</p>
         <div className="flex flex-wrap gap-2">
           {product.highlights.slice(0, 3).map((highlight) => (
-            <span key={highlight} className="rounded-full bg-sand/40 px-3 py-1 text-xs text-muted">
+            <span key={highlight} className="rounded-full bg-sand px-3 py-1 text-xs text-muted">
               {highlight}
             </span>
           ))}
@@ -40,7 +40,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link
             href={`/demo-store/${product.slug}`}
-            className="inline-flex items-center justify-center rounded-full border border-black/10 px-5 py-3 text-sm font-medium text-ink transition hover:bg-sand/30"
+            className="inline-flex items-center justify-center rounded-full border border-line px-5 py-3 text-sm font-semibold text-ink transition hover:bg-sand"
           >
             View details
           </Link>

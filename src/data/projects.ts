@@ -2,43 +2,58 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "commerce-platform",
-    title: "Composable Commerce Platform",
+    slug: "sfra-migration-solutions",
+    title: "SFRA Migration Solutions",
     summary:
-      "Platform foundation for a multi-market storefront with reusable merchandising sections, typed content models, and predictable rendering patterns.",
-    role: "Frontend Lead",
-    outcome: "Enabled faster launches while improving consistency across product, campaign, and editorial pages.",
-    href: "/case-studies/ecommerce-storefront-scaling",
-    tags: ["Next.js", "Architecture", "Ecommerce"]
+      "Public ecommerce case study covering migration from static AEM journeys to Salesforce Commerce Cloud SFRA for an education provider.",
+    role: "Technical Lead / SFCC Frontend Engineer",
+    outcome:
+      "Supported a thought-leadership niche around SFRA migration solutions, including number-one Google ranking for 3 of the past 10 weeks.",
+    href: "/case-studies/sfra-migration-solutions",
+    tags: ["SFCC", "SFRA", "Migration"]
   },
   {
-    slug: "design-system-foundation",
-    title: "Design System Foundation",
+    slug: "headless-sfcc-nextjs",
+    title: "Headless SFCC + Next.js Storefront",
     summary:
-      "Built a lean UI foundation that balanced composability, governance, and product team autonomy across several SaaS surfaces.",
-    role: "Frontend Architect",
-    outcome: "Reduced one-off component drift and sped up onboarding for engineers joining the product org.",
-    href: "/case-studies/frontend-architecture-design",
-    tags: ["Design System", "React", "Platform"]
+      "React and Next.js storefront on Salesforce Commerce Cloud with SLAS authentication, Shopper API integration, reusable UI, and Tailwind CSS.",
+    role: "Technical Lead",
+    outcome:
+      "Established a scalable frontend foundation for authenticated shopper flows, product discovery, cart, checkout, and SFCC data integration.",
+    href: "/case-studies/headless-sfcc-nextjs-storefront",
+    tags: ["Next.js", "React", "Headless Commerce"]
   },
   {
-    slug: "performance-program",
-    title: "Performance Recovery Program",
+    slug: "global-commerce-platform",
+    title: "Global Commerce Experience Platform",
     summary:
-      "Cross-functional performance initiative spanning bundle optimization, route strategy, and UX simplification across mobile-first funnels.",
-    role: "Frontend Lead",
-    outcome: "Delivered measurable conversion and Core Web Vitals gains with maintainable code changes.",
-    href: "/case-studies/performance-optimization",
-    tags: ["Web Vitals", "Optimization", "Conversion"]
+      "Multi-locale SFCC storefront work spanning React UI components, Page Designer modules, GTM analytics, OneTrust consent, and performance improvements.",
+    role: "Technical Lead",
+    outcome:
+      "Improved campaign flexibility, analytics readiness, privacy compliance, and storefront performance across global commerce experiences.",
+    href: "/case-studies/global-commerce-experience-platform",
+    tags: ["React", "Page Designer", "GTM"]
+  },
+  {
+    slug: "scholastic-commerce-programs",
+    title: "Scholastic Commerce Programs",
+    summary:
+      "SFRA storefront features for Dollar Catalog, Wallet, and Book Fair commerce workflows supporting schools, teachers, parents, and seasonal campaigns.",
+    role: "Technical Lead",
+    outcome:
+      "Delivered product discovery, promotional messaging, wallet workflows, checkout improvements, and production support for high-traffic education commerce.",
+    href: "/case-studies/sfra-migration-solutions",
+    tags: ["SFRA", "Education", "Checkout"]
   },
   {
     slug: "demo-store",
     title: "Demo Ecommerce Frontend",
     summary:
-      "This project includes a production-style store demo with static product pages, a persistent cart, and focused recommendation patterns.",
+      "Portfolio demo showing a production-style storefront with static product routes, persistent cart state, recommendations, and component-driven UI.",
     role: "Principal IC / Builder",
-    outcome: "Shows how product UX, architecture, and performance thinking come together in a compact deliverable.",
+    outcome:
+      "Demonstrates modern Next.js App Router implementation style for ecommerce frontend architecture and conversion-focused UI patterns.",
     href: "/demo-store",
-    tags: ["Next.js", "SSR", "App Router"]
+    tags: ["Next.js", "TypeScript", "App Router"]
   }
 ];

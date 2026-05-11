@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected frontend projects spanning commerce, design systems, architecture, and performance."
+  description: "Selected Ankit Suman frontend projects spanning SFCC, SFRA, React, Next.js, ecommerce, analytics, and performance."
 };
 
 export default function ProjectsPage() {
@@ -16,8 +16,8 @@ export default function ProjectsPage() {
       <section className="space-y-10">
         <SectionIntro
           eyebrow="Projects"
-          title="Senior-level frontend work with clear product and technical outcomes"
-          description="A concise project layer for recruiters, founders, and engineering leaders who want to scan capabilities quickly before diving deeper into case studies."
+          title="Selected frontend work across commerce platforms and customer-facing applications"
+          description="A concise project layer for recruiters, founders, and engineering leaders who want to scan SFCC, SFRA, React, Next.js, analytics, consent, and delivery leadership experience quickly."
         />
         <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((project) => (

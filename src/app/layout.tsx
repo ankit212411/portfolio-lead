@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import { SiteFrame } from "@/components/layout/site-frame";
 import { CartProvider } from "@/context/cart-context";
+import { ThemeProvider } from "@/context/theme-context";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
@@ -44,9 +45,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${display.variable} ${body.variable} font-body text-ink antialiased`}>
-        <CartProvider>
-          <SiteFrame>{children}</SiteFrame>
-        </CartProvider>
+        <ThemeProvider>
+          <CartProvider>
+            <SiteFrame>{children}</SiteFrame>
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

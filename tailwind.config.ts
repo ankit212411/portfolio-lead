@@ -15,10 +15,17 @@ const config: Config = {
           strong: "var(--accent-strong)",
           soft: "var(--accent-soft)"
         },
-        sand: "var(--sand)"
+        sand: "var(--sand)",
+        onInk: {
+          DEFAULT: "var(--on-ink)",
+          muted: "var(--on-ink-muted)",
+          line: "var(--on-ink-line)",
+          surface: "var(--on-ink-surface)"
+        }
       },
       boxShadow: {
-        soft: "0 24px 48px rgba(29, 35, 33, 0.08)"
+        soft: "var(--shadow-soft)",
+        crisp: "var(--shadow-crisp)"
       },
       fontFamily: {
         display: ["var(--font-display)"],

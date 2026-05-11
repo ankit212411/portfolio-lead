@@ -30,8 +30,8 @@ export function CartSidebar() {
         onClick={closeCart}
         aria-label="Close cart"
       />
-      <aside className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col border-l border-black/10 bg-[#fffaf4] shadow-soft">
-        <div className="flex items-center justify-between border-b border-black/5 px-6 py-5">
+      <aside className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col border-l border-line bg-surface shadow-soft">
+        <div className="flex items-center justify-between border-b border-line px-6 py-5">
           <div>
             <p className="font-display text-2xl tracking-tight text-ink">Cart</p>
             <p className="text-sm text-muted">Review items and keep the experience focused.</p>
@@ -39,7 +39,7 @@ export function CartSidebar() {
           <button
             type="button"
             onClick={closeCart}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-lg text-ink"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-lg text-ink shadow-crisp"
             aria-label="Close cart"
           >
             ×
@@ -48,7 +48,7 @@ export function CartSidebar() {
 
         <div className="flex-1 overflow-y-auto px-6 py-5">
           {items.length === 0 ? (
-            <div className="rounded-[2rem] border border-dashed border-black/10 bg-white/70 p-6">
+            <div className="rounded-lg border border-dashed border-line bg-sand p-6">
               <p className="font-display text-xl tracking-tight text-ink">Your cart is empty</p>
               <p className="mt-2 text-sm leading-6 text-muted">
                 Add a few products from the demo store to see cart persistence and focused client-side interactions.
@@ -60,7 +60,7 @@ export function CartSidebar() {
           ) : (
             <div className="space-y-4">
               {items.map((item) => (
-                <div key={item.product.slug} className="rounded-[2rem] border border-black/5 bg-white p-4">
+                <div key={item.product.slug} className="rounded-lg border border-line bg-surface p-4 shadow-crisp">
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1">
                       <p className="font-display text-lg tracking-tight text-ink">{item.product.name}</p>
@@ -76,11 +76,11 @@ export function CartSidebar() {
                     </button>
                   </div>
                   <div className="mt-4 flex items-center justify-between">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-sand/30 p-1">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-line bg-sand p-1">
                       <button
                         type="button"
                         onClick={() => decrementItem(item.product.slug)}
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm text-ink"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface text-sm text-ink"
                         aria-label={`Decrease ${item.product.name} quantity`}
                       >
                         −
@@ -89,7 +89,7 @@ export function CartSidebar() {
                       <button
                         type="button"
                         onClick={() => addItem(item.product)}
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm text-ink"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface text-sm text-ink"
                         aria-label={`Increase ${item.product.name} quantity`}
                       >
                         +
@@ -105,7 +105,7 @@ export function CartSidebar() {
           )}
         </div>
 
-        <div className="border-t border-black/5 px-6 py-5">
+        <div className="border-t border-line px-6 py-5">
           <div className="flex items-center justify-between text-sm text-muted">
             <span>Subtotal</span>
             <span className="font-medium text-ink">{formatCurrency(subtotal)}</span>

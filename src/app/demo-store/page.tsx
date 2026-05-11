@@ -18,7 +18,7 @@ export default async function DemoStorePage() {
 
   return (
     <Container className="pb-24 pt-12 md:pt-16">
-      <section className="rounded-[2.5rem] border border-black/5 bg-white/85 p-8 shadow-soft md:p-10">
+      <section className="rounded-xl border border-line bg-surface p-8 shadow-soft md:p-10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-5">
             <Badge>Demo Ecommerce Frontend</Badge>
@@ -29,7 +29,7 @@ export default async function DemoStorePage() {
               </p>
             </div>
           </div>
-          <div className="grid gap-3 rounded-[2rem] bg-sand/35 p-5 text-sm text-muted md:min-w-[18rem]">
+          <div className="grid gap-3 rounded-lg bg-sand p-5 text-sm text-muted md:min-w-[18rem]">
             <p>Static-friendly product routes with `revalidate` support.</p>
             <p>Client-side cart interactions isolated to focused boundaries.</p>
             <p>Reusable product cards and data-driven merchandising content.</p>

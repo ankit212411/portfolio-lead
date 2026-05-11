@@ -1,15 +1,15 @@
 import type { NavItem } from "@/types";
 
 export const siteConfig = {
-  name: "Frontend Lead Portfolio",
-  title: "Frontend Lead building scalable, high-performance ecommerce & SaaS products",
+  name: "Ankit Suman",
+  title: "Senior Technical Lead for React, Next.js & Salesforce Commerce Cloud storefronts",
   description:
-    "Portfolio and demo commerce frontend focused on architecture, performance, and conversion-minded product engineering.",
+    "Portfolio for a senior frontend technical lead with 13+ years building scalable ecommerce storefronts, SFCC/SFRA platforms, React applications, and performance-focused customer experiences.",
   email: "ankit@frontendlead.dev",
-  location: "Available for US-based remote contract roles",
+  location: "Available for US-based remote frontend and ecommerce contract roles",
   social: {
-    github: "https://github.com/your-handle",
-    linkedin: "https://www.linkedin.com/in/your-handle"
+    github: "",
+    linkedin: ""
   },
   nav: [
     { href: "/", label: "Home" },
@@ -22,15 +22,15 @@ export const siteConfig = {
 
 export const homepageHighlights = [
   {
-    value: "12+",
-    label: "Years leading frontend delivery across ecommerce and SaaS"
+    value: "13+",
+    label: "Years building enterprise storefronts, SaaS applications, and frontend platforms"
   },
   {
-    value: "React / Next.js",
-    label: "Hands-on architecture, design systems, and app platform work"
+    value: "React / Next.js / SFCC",
+    label: "Hands-on technical leadership across headless commerce, SFRA, and reusable UI systems"
   },
   {
-    value: "Performance + Conversion",
-    label: "Focused on measurable product outcomes, not just component output"
+    value: "Commerce + Performance",
+    label: "Focused on faster storefronts, cleaner checkout flows, analytics readiness, and business outcomes"
   }
 ];

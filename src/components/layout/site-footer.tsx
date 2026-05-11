@@ -6,12 +6,12 @@ import { Container } from "@/components/ui/container";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-black/5 py-10">
+    <footer className="border-t border-line py-10">
       <Container className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div className="space-y-2">
           <p className="font-display text-xl tracking-tight text-ink">{siteConfig.title}</p>
           <p className="max-w-2xl text-sm leading-6 text-muted">
-            Built to showcase portfolio storytelling, clean frontend architecture, and a pragmatic ecommerce experience.
+            Built to showcase SFCC/SFRA experience, React and Next.js architecture, enterprise ecommerce delivery, and a pragmatic storefront demo.
           </p>
         </div>
 

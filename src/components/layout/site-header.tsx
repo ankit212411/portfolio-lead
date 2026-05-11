@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 import { Container } from "@/components/ui/container";
 import { LogoMark } from "@/components/ui/logo-mark";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -21,18 +22,18 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-black/5 bg-[rgba(247,243,236,0.82)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-line bg-surface backdrop-blur-xl">
       <Container className="py-4">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3">
             <LogoMark />
             <div className="space-y-0.5">
               <p className="font-display text-sm font-semibold tracking-tight text-ink">{siteConfig.name}</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted">Portfolio + Commerce Demo</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-muted">SFCC + React Portfolio</p>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-2 md:flex">
+          <nav className="hidden items-center gap-1 rounded-full border border-line bg-sand p-1 md:flex">
             {siteConfig.nav.map((item) => {
               const isActive =
                 item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
@@ -42,8 +43,8 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-full px-4 py-2 text-sm font-medium text-muted transition hover:bg-white/80 hover:text-ink",
-                    isActive && "bg-white text-ink shadow-soft"
+                    "rounded-full px-4 py-2 text-sm font-medium text-muted transition hover:bg-surface hover:text-ink",
+                    isActive && "bg-surface text-ink shadow-crisp"
                   )}
                 >
                   {item.label}
@@ -53,20 +54,21 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <button
               type="button"
               onClick={openCart}
-              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-medium text-ink transition hover:bg-sand/40"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink shadow-crisp transition hover:border-ink/20"
             >
               Cart
-              <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-ink px-2 py-0.5 text-xs text-white">
+              <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-ink px-2 py-0.5 text-xs text-canvas">
                 {itemCount}
               </span>
             </button>
             <button
               type="button"
               onClick={() => setIsMenuOpen((value) => !value)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-ink md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-ink md:hidden"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation"
             >
@@ -76,7 +78,7 @@ export function SiteHeader() {
         </div>
 
         {isMenuOpen ? (
-          <nav className="mt-4 grid gap-2 rounded-3xl border border-black/5 bg-white p-3 md:hidden">
+          <nav className="mt-4 grid gap-2 rounded-xl border border-line bg-surface p-3 shadow-soft md:hidden">
             {siteConfig.nav.map((item) => {
               const isActive =
                 item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
@@ -86,8 +88,8 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-2xl px-4 py-3 text-sm font-medium text-muted transition hover:bg-sand/40 hover:text-ink",
-                    isActive && "bg-sand/50 text-ink"
+                    "rounded-lg px-4 py-3 text-sm font-medium text-muted transition hover:bg-sand hover:text-ink",
+                    isActive && "bg-sand text-ink"
                   )}
                 >
                   {item.label}

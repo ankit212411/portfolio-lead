@@ -8,14 +8,13 @@ type ProductPosterProps = {
 export function ProductPoster({ product, className }: ProductPosterProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-[2rem] border border-white/20 ${className ?? ""}`}
+      className={`relative overflow-hidden rounded-lg border border-line ${className ?? ""}`}
       style={{
-        background: `linear-gradient(145deg, ${product.accent.from}, ${product.accent.to})`
+        background: `linear-gradient(135deg, ${product.accent.from}, ${product.accent.to})`
       }}
     >
-      <div className="absolute inset-0 opacity-60">
-        <div className="absolute -right-10 top-8 h-40 w-40 rounded-full bg-white/20 blur-2xl" />
-        <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-black/10 blur-2xl" />
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.16)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.16)_1px,transparent_1px)] bg-[length:28px_28px]" />
       </div>
       <div className="relative flex h-full flex-col justify-between p-6">
         <div className="space-y-2">
@@ -30,7 +29,7 @@ export function ProductPoster({ product, className }: ProductPosterProps) {
           {product.highlights.slice(0, 2).map((highlight) => (
             <div
               key={highlight}
-              className="rounded-2xl border border-white/20 bg-white/10 px-3 py-2 text-xs uppercase tracking-[0.15em]"
+              className="rounded-md border border-onInk-line bg-onInk-surface px-3 py-2 text-xs uppercase tracking-[0.15em]"
               style={{ color: product.accent.ink }}
             >
               {highlight}

@@ -8,31 +8,38 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="rounded-[2rem] border border-black/5 bg-white/80 p-6 shadow-soft">
-      <div className="flex flex-wrap gap-2">
+    <article className="flex h-full min-w-0 flex-col overflow-hidden rounded-xl border border-line bg-surface shadow-crisp transition duration-200 hover:-translate-y-0.5 hover:shadow-soft">
+      <div className="border-b border-line p-5">
+        <div className="flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-black/10 bg-sand/30 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-muted"
+              className="text-contained rounded-full border border-line bg-sand px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-muted"
           >
             {tag}
           </span>
         ))}
+        </div>
       </div>
-      <div className="mt-5 space-y-3">
+
+      <div className="flex flex-1 flex-col gap-5 p-5">
         <div className="space-y-2">
-          <h3 className="font-display text-2xl tracking-tight text-ink">{project.title}</h3>
-          <p className="text-sm leading-6 text-muted">{project.summary}</p>
+          <h3 className="text-contained font-display text-2xl tracking-tight text-ink">{project.title}</h3>
+          <p className="text-contained text-sm leading-6 text-muted">{project.summary}</p>
         </div>
-        <div className="space-y-1 text-sm text-muted">
-          <p>
-            <span className="font-medium text-ink">Role:</span> {project.role}
-          </p>
-          <p>
-            <span className="font-medium text-ink">Outcome:</span> {project.outcome}
-          </p>
+
+        <div className="grid gap-px overflow-hidden rounded-lg border border-line bg-line text-sm">
+          <div className="grid gap-1 bg-sand p-4 sm:grid-cols-[6rem_1fr]">
+            <span className="font-semibold text-ink">Role</span>
+            <span className="text-contained leading-6 text-muted">{project.role}</span>
+          </div>
+          <div className="grid gap-1 bg-sand p-4 sm:grid-cols-[6rem_1fr]">
+            <span className="font-semibold text-ink">Outcome</span>
+            <span className="text-contained leading-6 text-muted">{project.outcome}</span>
+          </div>
         </div>
-        <Link href={project.href} className="inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-accent-strong">
+
+        <Link href={project.href} className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-accent-strong">
           Explore project
           <span aria-hidden="true">→</span>
         </Link>

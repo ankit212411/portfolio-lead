@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 export default function NotFound() {
   return (
     <Container className="flex min-h-[60vh] items-center py-20">
-      <div className="space-y-5 rounded-[2.5rem] border border-black/5 bg-white/85 p-10 shadow-soft">
+      <div className="space-y-5 rounded-xl border border-line bg-surface p-10 shadow-soft">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">404</p>
         <h1 className="font-display text-4xl tracking-tight text-ink">This page is not here</h1>
         <p className="max-w-xl text-base leading-7 text-muted">
