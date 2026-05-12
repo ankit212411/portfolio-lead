@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "Senior Technical Lead for React, Next.js & Salesforce Commerce Cloud storefronts",
   description:
     "Portfolio for a senior frontend technical lead with 13+ years building scalable ecommerce storefronts, SFCC/SFRA platforms, React applications, and performance-focused customer experiences.",
-  email: "ankit@frontendlead.dev",
+  email: "ankitsumance@gmail.com",
   location: "Available for US-based remote frontend and ecommerce contract roles",
   social: {
     github: "",

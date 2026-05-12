@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 
 const variantClasses = {
   primary:
-    "bg-ink text-onInk shadow-crisp hover:shadow-soft focus-visible:outline-ink",
+    "bg-accent text-[#101820] shadow-crisp hover:shadow-soft focus-visible:outline-accent",
   secondary:
-    "bg-surface text-ink ring-1 ring-line shadow-crisp hover:bg-sand focus-visible:outline-ink",
+    "bg-transparent text-ink ring-1 ring-accent shadow-crisp hover:bg-accent-soft focus-visible:outline-accent",
   ghost:
     "bg-transparent text-ink hover:bg-surface focus-visible:outline-ink"
 } as const;

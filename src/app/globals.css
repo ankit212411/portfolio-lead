@@ -3,43 +3,49 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  --canvas: #f5f6f1;
-  --surface: #ffffff;
-  --line: #dfe3dc;
-  --ink: #101312;
-  --muted: #626a66;
-  --accent: #b7f34d;
-  --accent-strong: #4e6800;
-  --accent-soft: #eefbda;
-  --sand: #ecefea;
-  --on-ink: #f7faf4;
-  --on-ink-muted: #b8c0b9;
-  --on-ink-line: rgba(255, 255, 255, 0.12);
-  --on-ink-surface: rgba(255, 255, 255, 0.06);
-  --grid: rgba(16, 19, 18, 0.04);
-  --shadow-soft: 0 18px 45px rgba(16, 19, 18, 0.08);
-  --shadow-crisp: 0 1px 0 rgba(16, 19, 18, 0.08);
-}
-
-[data-theme="dark"] {
   color-scheme: dark;
-  --canvas: #0f1312;
-  --surface: #171c1a;
-  --line: #29302d;
-  --ink: #f4f7f2;
-  --muted: #a5aea8;
-  --accent: #b7f34d;
-  --accent-strong: #d4ff77;
-  --accent-soft: #26351a;
-  --sand: #202622;
-  --on-ink: #101312;
-  --on-ink-muted: #46504a;
-  --on-ink-line: rgba(16, 19, 18, 0.12);
-  --on-ink-surface: rgba(16, 19, 18, 0.06);
-  --grid: rgba(244, 247, 242, 0.055);
+  --canvas: #0d1a22;
+  --surface: #12232d;
+  --line: #243846;
+  --ink: #f8fbfb;
+  --muted: #9baab2;
+  --accent: #ff715f;
+  --accent-strong: #ff8b7b;
+  --accent-soft: #321d20;
+  --sand: #172b36;
+  --deep: #08131a;
+  --deep-ink: #f8fbfb;
+  --deep-muted: #91a2ab;
+  --on-ink: #0d1a22;
+  --on-ink-muted: #475b65;
+  --on-ink-line: rgba(13, 26, 34, 0.16);
+  --on-ink-surface: rgba(13, 26, 34, 0.08);
+  --grid: rgba(248, 251, 251, 0.035);
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.32);
   --shadow-crisp: 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --canvas: #f6f3ee;
+  --surface: #ffffff;
+  --line: #e4ddd5;
+  --ink: #12171a;
+  --muted: #606a70;
+  --accent: #ff6f5c;
+  --accent-strong: #d94e3e;
+  --accent-soft: #fff0ed;
+  --sand: #f0ebe5;
+  --deep: #10212b;
+  --deep-ink: #fbfbf8;
+  --deep-muted: #a9b8c1;
+  --on-ink: #fbfbf8;
+  --on-ink-muted: #c5d0d6;
+  --on-ink-line: rgba(255, 255, 255, 0.14);
+  --on-ink-surface: rgba(255, 255, 255, 0.07);
+  --grid: rgba(18, 23, 26, 0.045);
+  --shadow-soft: 0 18px 45px rgba(18, 23, 26, 0.12);
+  --shadow-crisp: 0 1px 0 rgba(18, 23, 26, 0.08);
 }
 
 * {
@@ -56,7 +62,7 @@ body {
   background:
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-    linear-gradient(180deg, var(--surface) 0%, var(--canvas) 44%, var(--surface) 100%);
+    linear-gradient(180deg, var(--deep) 0%, var(--canvas) 44%, var(--canvas) 100%);
   background-size: 56px 56px, 56px 56px, auto;
   color: var(--ink);
   transition: background-color 200ms ease, color 200ms ease;

@@ -91,15 +91,15 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
           </section>
         </div>
 
-        <section className="rounded-xl border border-line bg-ink p-8 text-onInk shadow-soft">
+        <section className="rounded-xl border border-line bg-deep p-8 text-deep-ink shadow-soft">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-2xl space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-onInk-muted">Technical Decisions</p>
-              <h2 className="font-display text-3xl tracking-tight text-onInk">Why the implementation choices mattered</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-deep-muted">Technical Decisions</p>
+              <h2 className="font-display text-3xl tracking-tight text-deep-ink">Why the implementation choices mattered</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {study.stack.map((item) => (
-                <span key={item} className="rounded-full border border-onInk-line bg-onInk-surface px-3 py-1 text-xs uppercase tracking-[0.16em] text-onInk-muted">
+                <span key={item} className="rounded-full border border-onInk-line bg-onInk-surface px-3 py-1 text-xs uppercase tracking-[0.16em] text-deep-muted">
                   {item}
                 </span>
               ))}
@@ -108,8 +108,8 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {study.technicalDecisions.map((decision) => (
               <article key={decision.title} className="rounded-md border border-onInk-line bg-onInk-surface p-5">
-                <h3 className="font-display text-2xl tracking-tight text-onInk">{decision.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-onInk-muted">{decision.detail}</p>
+                <h3 className="font-display text-2xl tracking-tight text-deep-ink">{decision.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-deep-muted">{decision.detail}</p>
               </article>
             ))}
           </div>
