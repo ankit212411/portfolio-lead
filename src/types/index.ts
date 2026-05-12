@@ -69,3 +69,24 @@ export type CartItem = {
   product: Product;
   quantity: number;
 };
+
+export type CheckoutDetails = {
+  email: string;
+  fullName: string;
+  address: string;
+  city: string;
+  region: string;
+  postalCode: string;
+  deliveryMethod: "standard" | "express";
+};
+
+export type DemoOrder = {
+  id: string;
+  createdAt: string;
+  items: CartItem[];
+  customer: CheckoutDetails;
+  subtotal: number;
+  shipping: number;
+  tax: number;
+  total: number;
+};
