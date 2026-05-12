@@ -22,18 +22,18 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-line bg-deep backdrop-blur-xl">
       <Container className="py-4">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3">
             <LogoMark />
             <div className="space-y-0.5">
-              <p className="font-display text-sm font-semibold tracking-tight text-ink">{siteConfig.name}</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted">SFCC + React Portfolio</p>
+              <p className="font-display text-sm font-semibold tracking-tight text-deep-ink">{siteConfig.name}</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-deep-muted">SFCC + React Portfolio</p>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-1 rounded-full border border-line bg-sand p-1 md:flex">
+          <nav className="hidden items-center gap-1 rounded-full border border-line bg-surface p-1 md:flex">
             {siteConfig.nav.map((item) => {
               const isActive =
                 item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
@@ -58,10 +58,10 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={openCart}
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink shadow-crisp transition hover:border-ink/20"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink shadow-crisp transition hover:border-accent"
             >
               Cart
-              <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-ink px-2 py-0.5 text-xs text-canvas">
+              <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-accent px-2 py-0.5 text-xs text-[#101820]">
                 {itemCount}
               </span>
             </button>

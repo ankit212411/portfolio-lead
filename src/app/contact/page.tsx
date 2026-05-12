@@ -70,18 +70,18 @@ export default function ContactPage() {
           </Link>
         </section>
 
-        <section className="rounded-xl border border-line bg-ink p-8 text-onInk shadow-soft">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-onInk-muted">How I can help</p>
+        <section className="rounded-xl border border-line bg-deep p-8 text-deep-ink shadow-soft">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-deep-muted">How I can help</p>
           <div className="mt-6 grid gap-4">
             {engagementPoints.map((point) => (
               <div key={point} className="rounded-md border border-onInk-line bg-onInk-surface p-5">
-                <p className="font-medium text-onInk">{point}</p>
+                <p className="font-medium text-deep-ink">{point}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 rounded-md border border-onInk-line bg-onInk-surface p-6">
-            <p className="font-display text-2xl tracking-tight text-onInk">Ideal brief</p>
-            <p className="mt-3 text-sm leading-7 text-onInk-muted">
+            <p className="font-display text-2xl tracking-tight text-deep-ink">Ideal brief</p>
+            <p className="mt-3 text-sm leading-7 text-deep-muted">
               Include platform context, storefront architecture, team size, current SFCC or React challenges, and what success looks like in the next 60-90 days. That is usually enough to scope a useful first conversation.
             </p>
           </div>

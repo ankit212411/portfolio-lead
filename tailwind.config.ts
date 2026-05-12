@@ -16,6 +16,11 @@ const config: Config = {
           soft: "var(--accent-soft)"
         },
         sand: "var(--sand)",
+        deep: {
+          DEFAULT: "var(--deep)",
+          ink: "var(--deep-ink)",
+          muted: "var(--deep-muted)"
+        },
         onInk: {
           DEFAULT: "var(--on-ink)",
           muted: "var(--on-ink-muted)",
