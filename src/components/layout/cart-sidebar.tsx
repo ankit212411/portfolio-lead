@@ -113,13 +113,24 @@ export function CartSidebar() {
           <p className="mt-2 text-xs uppercase tracking-[0.18em] text-muted">
             Demo only. No checkout backend connected.
           </p>
-          <button
-            type="button"
-            className={buttonVariants({ className: "mt-4 w-full" })}
-            disabled={items.length === 0}
-          >
-            Continue to checkout
-          </button>
+          <div className="mt-4 grid gap-3">
+            <Link
+              href="/demo-store/cart"
+              className={buttonVariants({ variant: "secondary", className: "w-full" })}
+              onClick={closeCart}
+            >
+              View cart
+            </Link>
+            {items.length > 0 ? (
+              <Link
+                href="/demo-store/checkout"
+                className={buttonVariants({ className: "w-full" })}
+                onClick={closeCart}
+              >
+                Continue to checkout
+              </Link>
+            ) : null}
+          </div>
         </div>
       </aside>
     </div>

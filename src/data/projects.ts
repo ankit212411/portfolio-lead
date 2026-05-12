@@ -2,6 +2,17 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    slug: "multi-agent-parallel-systems",
+    title: "Multi-Agent Parallel Systems Research",
+    summary:
+      "Research brief on orchestrator-worker systems, shared-state agent workflows, reviewer-executor loops, and enterprise adoption patterns for AI-assisted delivery.",
+    role: "Research Author / Technical Strategist",
+    outcome:
+      "Created a practical adoption model for product and services companies evaluating multi-agent AI for engineering modernization, QA, incident analysis, RFPs, and delivery planning.",
+    href: "/research/multi-agent-parallel-systems",
+    tags: ["AI Agents", "Research", "Enterprise Strategy"]
+  },
+  {
     slug: "sfra-migration-solutions",
     title: "SFRA Migration Solutions",
     summary:

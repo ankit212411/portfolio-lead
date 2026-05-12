@@ -103,7 +103,7 @@ export default function HomePage() {
         </section>
       </Container>
 
-      <div className="border-y border-line bg-surface py-5">
+      <div className="border-y border-line bg-surface py-5 mt-20">
         <Container>
           <div className="grid grid-cols-2 gap-4 text-sm font-semibold text-muted sm:grid-cols-4 lg:grid-cols-8">
             {skills.map((skill) => (
