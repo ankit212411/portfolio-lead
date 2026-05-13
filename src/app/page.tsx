@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { SkillsCollapsible } from "@/components/portfolio/skills-collapsible";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -8,7 +9,41 @@ import { caseStudies } from "@/data/case-studies";
 import { projects } from "@/data/projects";
 import { homepageHighlights, siteConfig } from "@/lib/site";
 
-const skills = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "SFCC", "SFRA"];
+const skills = ["React.js", "Angular", "TypeScript", "Next.js", "SFCC", "SFRA", "Node.js", "REST APIs"];
+
+const skillGroups = [
+  {
+    title: "Front-End Technologies",
+    accent: "01",
+    skills: [
+      "React.js",
+      "Angular",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SCSS",
+      "Bootstrap",
+      "Angular Material",
+      "jQuery"
+    ]
+  },
+  {
+    title: "Backend & Integration",
+    accent: "02",
+    skills: ["Node.js", "Express.js", "MongoDB", "REST APIs"]
+  },
+  {
+    title: "Frameworks & Platforms",
+    accent: "03",
+    skills: ["Salesforce Commerce Cloud (SFCC)", "SFRA", "PWA"]
+  },
+  {
+    title: "Operating Systems",
+    accent: "04",
+    skills: ["Windows", "macOS"]
+  }
+];
 
 const services = [
   {
@@ -38,7 +73,7 @@ function WorkVisual({ label, index }: { label: string; index: number }) {
       <div className="absolute -right-14 top-8 h-44 w-44 rounded-full border-[18px] border-accent" />
       <div className="absolute left-8 top-8 text-5xl font-semibold text-accent">&lt;</div>
       <div className="absolute bottom-8 right-8 text-5xl font-semibold text-accent">&gt;</div>
-      <div className="relative m-6 rounded-lg border border-onInk-line bg-onInk-surface  pl-8 p-5 font-mono text-xs leading-6 text-deep-ink">
+      <div className="relative m-6 rounded-lg border border-onInk-line bg-onInk-surface p-5 pl-10 font-mono text-xs leading-6 text-deep-ink sm:pl-12">
         <p className="text-accent">{label}</p>
         <p className="mt-4 text-deep-muted">{"// commerce frontend"}</p>
         <p>{snippets[index % snippets.length]}</p>
@@ -103,7 +138,7 @@ export default function HomePage() {
         </section>
       </Container>
 
-      <div className="border-y border-line bg-surface py-5 mt-20">
+      <div className="mt-20 border-y border-line bg-surface py-5">
         <Container>
           <div className="grid grid-cols-2 gap-4 text-sm font-semibold text-muted sm:grid-cols-4 lg:grid-cols-8">
             {skills.map((skill) => (
@@ -114,6 +149,10 @@ export default function HomePage() {
           </div>
         </Container>
       </div>
+
+      <Container className="pt-14">
+        <SkillsCollapsible groups={skillGroups} />
+      </Container>
 
       <Container className="pt-20">
         <section className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
