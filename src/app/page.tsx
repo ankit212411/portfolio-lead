@@ -38,7 +38,7 @@ function WorkVisual({ label, index }: { label: string; index: number }) {
       <div className="absolute -right-14 top-8 h-44 w-44 rounded-full border-[18px] border-accent" />
       <div className="absolute left-8 top-8 text-5xl font-semibold text-accent">&lt;</div>
       <div className="absolute bottom-8 right-8 text-5xl font-semibold text-accent">&gt;</div>
-      <div className="relative m-6 rounded-lg border border-onInk-line bg-onInk-surface p-5 font-mono text-xs leading-6 text-deep-ink">
+      <div className="relative m-6 rounded-lg border border-onInk-line bg-onInk-surface  pl-8 p-5 font-mono text-xs leading-6 text-deep-ink">
         <p className="text-accent">{label}</p>
         <p className="mt-4 text-deep-muted">{"// commerce frontend"}</p>
         <p>{snippets[index % snippets.length]}</p>
