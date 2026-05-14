@@ -8,14 +8,14 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Ankit Suman for remote frontend, React, Next.js, SFCC, and ecommerce technical lead opportunities."
+  description: "Contact Ankit Suman for US remote frontend architecture, ecommerce modernization, React, Next.js, SFCC, and contract technical lead work."
 };
 
 const engagementPoints = [
-  "SFCC/SFRA storefront development, migration support, and Page Designer implementation",
-  "React and Next.js frontend architecture for headless commerce builds",
-  "GTM, OneTrust, analytics readiness, privacy consent, and performance-minded script management",
-  "Technical leadership, code reviews, mentoring, sprint planning, and stakeholder collaboration"
+  "SFCC/SFRA modernization, storefront delivery, migration planning, and Page Designer implementation",
+  "React and Next.js frontend architecture for headless commerce, SaaS products, and high-traffic customer journeys",
+  "Performance budgets, GTM, OneTrust, analytics readiness, privacy consent, and script governance",
+  "Technical leadership across planning, code reviews, mentoring, QA alignment, and stakeholder communication"
 ];
 
 export default function ContactPage() {
@@ -25,8 +25,8 @@ export default function ContactPage() {
         <section className="rounded-xl border border-line bg-surface p-8 shadow-soft">
           <SectionIntro
             eyebrow="Contact"
-            title="Available for remote frontend and ecommerce technical lead work"
-            description="Best fit for commerce teams that need senior React, Next.js, SFCC, SFRA, analytics, and performance experience from someone who can lead architecture and still ship production code."
+            title="Available for US remote frontend architecture and ecommerce modernization work"
+            description="Best fit for startups and commerce teams that need a senior React, Next.js, SFCC, or SFRA lead who can own architecture, communicate async, overlap with US teams, and still ship production code."
           />
           <div className="mt-8 space-y-4 text-sm leading-7 text-muted">
             <p>
@@ -62,11 +62,11 @@ export default function ContactPage() {
               </p>
             ) : null}
             <p>
-              <span className="font-medium text-ink">Availability:</span> {siteConfig.location}
+              <span className="font-medium text-ink">Availability:</span> Remote contract engagements with practical US timezone overlap.
             </p>
           </div>
           <Link href={`mailto:${siteConfig.email}`} className={buttonVariants({ className: "mt-8" })}>
-            Start the conversation
+            Discuss the engagement
           </Link>
         </section>
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
           <div className="mt-8 rounded-md border border-onInk-line bg-onInk-surface p-6">
             <p className="font-display text-2xl tracking-tight text-deep-ink">Ideal brief</p>
             <p className="mt-3 text-sm leading-7 text-deep-muted">
-              Include platform context, storefront architecture, team size, current SFCC or React challenges, and what success looks like in the next 60-90 days. That is usually enough to scope a useful first conversation.
+              Share the platform context, team size, current SFCC or React constraints, release risks, performance goals, and what success should look like in the next 60-90 days. That is enough to scope a useful first conversation.
             </p>
           </div>
         </section>

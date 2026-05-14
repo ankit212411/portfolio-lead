@@ -69,7 +69,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <section className="rounded-lg border border-line bg-surface p-7 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Problem</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Challenge</p>
             <div className="mt-5 space-y-4">
               {study.problem.map((entry) => (
                 <p key={entry} className="text-sm leading-7 text-muted">
@@ -80,7 +80,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
           </section>
 
           <section className="rounded-lg border border-line bg-surface p-7 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Approach</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Technical Approach</p>
             <div className="mt-5 space-y-4">
               {study.approach.map((entry) => (
                 <p key={entry} className="text-sm leading-7 text-muted">
@@ -94,8 +94,8 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps
         <section className="rounded-xl border border-line bg-deep p-8 text-deep-ink shadow-soft">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-2xl space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-deep-muted">Technical Decisions</p>
-              <h2 className="font-display text-3xl tracking-tight text-deep-ink">Why the implementation choices mattered</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-deep-muted">Architecture Decisions</p>
+              <h2 className="font-display text-3xl tracking-tight text-deep-ink">Implementation choices tied to business impact</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {study.stack.map((item) => (

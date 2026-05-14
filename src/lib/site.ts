@@ -2,11 +2,11 @@ import type { NavItem } from "@/types";
 
 export const siteConfig = {
   name: "Ankit Suman",
-  title: "Senior Technical Lead for React, Next.js & Salesforce Commerce Cloud storefronts",
+  title: "Frontend architecture lead for scalable React, Next.js, and SFCC commerce systems",
   description:
-    "Portfolio for a senior frontend technical lead with 13+ years building scalable ecommerce storefronts, SFCC/SFRA platforms, React applications, and performance-focused customer experiences.",
+    "Portfolio for a senior frontend architecture lead helping ecommerce and SaaS teams ship scalable React, Next.js, SFCC, and SFRA systems with better performance, cleaner delivery, and stronger conversion paths.",
   email: "ankitsumance@gmail.com",
-  location: "Available for US-based remote frontend and ecommerce contract roles",
+  location: "Available for US remote contract roles with practical timezone overlap",
   social: {
     github: "",
     linkedin: ""
@@ -23,14 +23,14 @@ export const siteConfig = {
 export const homepageHighlights = [
   {
     value: "13+",
-    label: "Years building enterprise storefronts, SaaS applications, and frontend platforms"
+    label: "Years leading enterprise storefronts, SaaS applications, and customer-facing frontend systems"
   },
   {
-    value: "React / Next.js / SFCC",
-    label: "Hands-on technical leadership across headless commerce, SFRA, and reusable UI systems"
+    value: "30-40%",
+    label: "Typical release friction reduction through reusable frontend patterns, clearer ownership, and typed contracts"
   },
   {
-    value: "Commerce + Performance",
-    label: "Focused on faster storefronts, cleaner checkout flows, analytics readiness, and business outcomes"
+    value: "Core Web Vitals",
+    label: "Performance, checkout UX, analytics, and conversion paths treated as architecture concerns"
   }
 ];

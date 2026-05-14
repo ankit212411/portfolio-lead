@@ -12,16 +12,16 @@ const skills = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js",
 
 const services = [
   {
-    title: "SFCC / SFRA Storefronts",
-    description: "Migration support, Page Designer modules, checkout flows, and enterprise commerce delivery."
+    title: "Commerce Architecture Ownership",
+    description: "SFCC, SFRA, headless storefronts, checkout flows, Page Designer modules, and migration paths that reduce delivery risk."
   },
   {
-    title: "React + Next.js Architecture",
-    description: "Headless storefront foundations, typed UI systems, auth flows, and reusable component patterns."
+    title: "React + Next.js Delivery Systems",
+    description: "Typed App Router foundations, reusable commerce components, API boundaries, auth flows, and maintainable frontend standards."
   },
   {
-    title: "Performance + Analytics",
-    description: "GTM, OneTrust, script governance, storefront performance, and conversion-minded UX improvements."
+    title: "Performance + Conversion Execution",
+    description: "Core Web Vitals, GTM, OneTrust, script governance, checkout UX, and analytics-ready customer journeys."
   }
 ];
 
@@ -38,7 +38,7 @@ function WorkVisual({ label, index }: { label: string; index: number }) {
       <div className="absolute -right-14 top-8 h-44 w-44 rounded-full border-[18px] border-accent" />
       <div className="absolute left-8 top-8 text-5xl font-semibold text-accent">&lt;</div>
       <div className="absolute bottom-8 right-8 text-5xl font-semibold text-accent">&gt;</div>
-      <div className="relative m-6 rounded-lg border border-onInk-line bg-onInk-surface p-5 font-mono text-xs leading-6 text-deep-ink">
+      <div className="relative m-6 rounded-lg border border-onInk-line bg-onInk-surface p-5 pl-10 font-mono text-xs leading-6 text-deep-ink sm:pl-12">
         <p className="text-accent">{label}</p>
         <p className="mt-4 text-deep-muted">{"// commerce frontend"}</p>
         <p>{snippets[index % snippets.length]}</p>
@@ -57,28 +57,28 @@ export default function HomePage() {
           <div className="space-y-8">
             <div className="flex items-center gap-4">
               <span className="h-px w-24 bg-accent" />
-              <Badge>US Remote Contract Focus</Badge>
+              <Badge>US Remote Frontend Architecture</Badge>
             </div>
             <div className="space-y-4">
               <p className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">
                 Hello<span className="text-accent">.</span>
               </p>
               <h1 className="max-w-5xl font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl md:text-7xl">
-                I&apos;m Ankit, Senior Technical Lead for React, Next.js &amp; SFCC
+                I lead scalable ecommerce frontends that improve speed, conversion, and delivery confidence
               </h1>
               <p className="max-w-2xl text-base leading-8 text-muted md:text-lg">
-                I build enterprise ecommerce storefronts across Salesforce Commerce Cloud, SFRA, React, Next.js, TypeScript, analytics, privacy tooling, and performance-focused customer experiences.
+                Frontend architecture lead with 13+ years shipping React, Next.js, SFCC, and SFRA storefronts. I help commerce teams modernize platforms, reduce release friction, and turn performance work into measurable customer impact.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className={buttonVariants({ className: "justify-center" })}>
-                Got a project?
+                Discuss a contract engagement
               </Link>
               <Link
                 href="/case-studies"
                 className={buttonVariants({ variant: "secondary", className: "justify-center" })}
               >
-                View case studies
+                Review business outcomes
               </Link>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function HomePage() {
               <div className="absolute bottom-5 left-5 right-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Frontend Leadership</p>
                 <p className="mt-2 text-sm leading-6 text-deep-ink">
-                  Architecture, delivery, mentoring, and hands-on implementation for commerce teams.
+                  Architecture ownership, delivery planning, mentoring, and hands-on implementation for commerce teams.
                 </p>
               </div>
             </div>
@@ -150,10 +150,10 @@ export default function HomePage() {
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">About me</p>
               <h2 className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">
-                Commerce frontend leadership with hands-on delivery depth
+                Frontend systems leadership for teams that need architecture and execution
               </h2>
               <p className="max-w-3xl text-sm leading-7 text-muted md:text-base">
-                My work spans global luxury ecommerce, education commerce, headless SFCC storefronts, SFRA migrations, authenticated shopper flows, reusable UI architecture, GTM, OneTrust, and production support for high-traffic customer experiences.
+                I own the frontend layer from system design through production delivery: storefront architecture, component strategy, commerce API integration, performance budgets, analytics readiness, and cross-functional alignment with product, design, backend, QA, and business stakeholders.
               </p>
             </div>
             <div className="grid gap-5 sm:grid-cols-3">
@@ -173,7 +173,7 @@ export default function HomePage() {
       <Container className="pt-24">
         <section className="space-y-14">
           <div className="text-center">
-            <h2 className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">Case studies</h2>
+            <h2 className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">Business impact case studies</h2>
             <div className="mx-auto mt-6 h-14 w-px bg-accent" />
           </div>
 
@@ -227,7 +227,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong">Projects</p>
-              <h2 className="font-display text-4xl font-semibold tracking-tight text-ink">Selected work</h2>
+              <h2 className="font-display text-4xl font-semibold tracking-tight text-ink">Selected systems and builds</h2>
             </div>
             <Link href="/projects" className="inline-flex items-center gap-2 border-b border-accent pb-1 text-sm font-semibold text-ink">
               All projects <span aria-hidden="true">↗</span>
@@ -270,18 +270,18 @@ export default function HomePage() {
               <p className="text-sm text-muted">Contacts</p>
             </div>
             <h2 className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">
-              Have a project?
+              Need senior frontend leadership?
               <br />
-              Let&apos;s talk!
+              Let&apos;s scope the work.
             </h2>
             <Link href="/contact" className={buttonVariants({ className: "mt-2" })}>
-              Start the conversation
+              Start a focused conversation
             </Link>
           </div>
           <div className="grid gap-4 text-sm text-muted">
-            <div className="border-b border-line pb-3">SFCC / SFRA storefront development</div>
-            <div className="border-b border-line pb-3">React and Next.js architecture</div>
-            <div className="border-b border-line pb-3">GTM, OneTrust, performance, and checkout UX</div>
+            <div className="border-b border-line pb-3">SFCC / SFRA modernization and storefront delivery</div>
+            <div className="border-b border-line pb-3">React and Next.js architecture for commerce teams</div>
+            <div className="border-b border-line pb-3">Performance, analytics, checkout UX, and release quality</div>
             <p className="pt-2">{siteConfig.location}</p>
           </div>
         </section>

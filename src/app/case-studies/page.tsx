@@ -16,8 +16,8 @@ export default function CaseStudiesPage() {
       <section className="space-y-10">
         <SectionIntro
           eyebrow="Case Studies"
-          title="Commerce case studies grounded in real SFCC and frontend delivery"
-          description="Structured for fast review: migration context, technical approach, implementation decisions, and credible results from enterprise ecommerce work."
+          title="Commerce case studies focused on architecture decisions and business outcomes"
+          description="Each case study is structured for fast review: the commercial challenge, technical approach, architecture choices, and measurable delivery or operational impact."
         />
         <div className="grid gap-6 xl:grid-cols-3">
           {caseStudies.map((study) => (
