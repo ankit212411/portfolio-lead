@@ -8,7 +8,7 @@ import { getFeaturedProducts, getProducts } from "@/lib/commerce";
 
 export const metadata: Metadata = {
   title: "Demo Store",
-  description: "Production-style ecommerce frontend with static-friendly product routes, cart state, and focused recommendations."
+  description: "Production-style ecommerce frontend with App Router rendering, reusable commerce components, cart state, checkout, and recommendations."
 };
 
 export const revalidate = 3600;
@@ -21,18 +21,19 @@ export default async function DemoStorePage() {
       <section className="rounded-xl border border-line bg-surface p-8 shadow-soft md:p-10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-5">
-            <Badge>Demo Ecommerce Frontend</Badge>
+            <Badge>Production-Style Demo Storefront</Badge>
             <div className="space-y-3">
-              <h1 className="font-display text-4xl tracking-tight text-ink md:text-6xl">Clean commerce UX with performance-minded architecture</h1>
+              <h1 className="font-display text-4xl tracking-tight text-ink md:text-6xl">A compact ecommerce frontend built like a real storefront system</h1>
               <p className="text-lg leading-8 text-muted">
-                This storefront demo is intentionally compact: product listing, static detail pages, cart persistence, and recommendation modules that reflect real ecommerce frontend priorities.
+                This demo shows how I structure commerce UI for production work: static-friendly product pages, scoped client state, persistent cart interactions, checkout flow, recommendation modules, and reusable product primitives.
               </p>
             </div>
           </div>
           <div className="grid gap-3 rounded-lg bg-sand p-5 text-sm text-muted md:min-w-[18rem]">
-            <p>Static-friendly product routes with `revalidate` support.</p>
-            <p>Client-side cart interactions isolated to focused boundaries.</p>
-            <p>Reusable product cards and data-driven merchandising content.</p>
+            <p>App Router pages with static generation and `revalidate` support.</p>
+            <p>Client-side cart and checkout state isolated behind focused boundaries.</p>
+            <p>Reusable product, pricing, recommendation, and merchandising components.</p>
+            <p>Data-driven structure that can be replaced with Shopify, SFCC, or custom APIs.</p>
           </div>
         </div>
       </section>
@@ -49,7 +50,7 @@ export default async function DemoStorePage() {
         <RecommendationStrip
           products={featuredProducts}
           title="Featured products"
-          description="Merchandising blocks like this are useful for campaign landings, collection pages, and post-PDP browsing flows."
+          description="A production storefront would drive this from merchandising rules, shopper behavior, inventory, and campaign context."
         />
       </section>
     </Container>

@@ -29,7 +29,7 @@ export function SiteHeader() {
             <LogoMark />
             <div className="space-y-0.5">
               <p className="font-display text-sm font-semibold tracking-tight text-deep-ink">{siteConfig.name}</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-deep-muted">SFCC + React Portfolio</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-deep-muted">Commerce Frontend Architect</p>
             </div>
           </Link>
 

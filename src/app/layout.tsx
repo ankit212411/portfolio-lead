@@ -23,12 +23,12 @@ const body = IBM_Plex_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ankitsuman.space"),
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} | Frontend Architecture Lead`,
     template: `%s | ${siteConfig.name}`
   },
   description: siteConfig.description,
   openGraph: {
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
     url: "https://frontend-lead-portfolio.vercel.app",
     siteName: siteConfig.name,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description
   }
 };

@@ -45,10 +45,17 @@ export type ProductAccent = {
   ink: string;
 };
 
+export type ProductImage = {
+  src: string;
+  alt: string;
+  position?: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
   category: string;
+  image: ProductImage;
   price: number;
   description: string;
   longDescription: string;

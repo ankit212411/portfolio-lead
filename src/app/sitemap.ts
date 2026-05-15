@@ -6,7 +6,14 @@ import { products } from "@/data/products";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://frontend-lead-portfolio.vercel.app";
 
-  const staticRoutes = ["", "/case-studies", "/projects", "/contact", "/demo-store"].map((route) => ({
+  const staticRoutes = [
+    "",
+    "/case-studies",
+    "/projects",
+    "/contact",
+    "/demo-store",
+    "/research/multi-agent-delivery"
+  ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date()
   }));

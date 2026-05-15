@@ -182,12 +182,12 @@ export function AgentWorkbench() {
               A portable workbench concept that analyzes a Jira story, classifies frontend/backend scope, proposes agent assignments, runs reviewer and QA gates, and pauses for human approval.
             </p>
           </div>
-          <div className="rounded-xl border border-line bg-deep p-6 text-deep-ink shadow-soft">
+          {/* <div className="rounded-xl border border-line bg-deep p-6 text-deep-ink shadow-soft">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Portable folder model</p>
             <p className="mt-4 text-sm leading-7 text-deep-muted">
               The demo logic lives under <span className="font-mono text-deep-ink">src/features/agent-workbench</span> so it can be extracted into a package or copied into another project with minimal app-shell wiring.
             </p>
-          </div>
+          </div> */}
         </section>
       </Container>
 

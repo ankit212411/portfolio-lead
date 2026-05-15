@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div className="space-y-2">
           <p className="font-display text-xl tracking-tight text-ink">{siteConfig.title}</p>
           <p className="max-w-2xl text-sm leading-6 text-muted">
-            Built to showcase SFCC/SFRA experience, React and Next.js architecture, enterprise ecommerce delivery, and a pragmatic storefront demo.
+            Built to show how I approach frontend systems: SFCC/SFRA modernization, React and Next.js architecture, performance-minded delivery, and practical AI-assisted engineering workflows.
           </p>
         </div>
 
