@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { SkillsCollapsible } from "@/components/portfolio/skills-collapsible";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -8,7 +9,41 @@ import { caseStudies } from "@/data/case-studies";
 import { projects } from "@/data/projects";
 import { homepageHighlights, siteConfig } from "@/lib/site";
 
-const skills = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "SFCC", "SFRA"];
+const skills = ["React.js", "Angular", "TypeScript", "Next.js", "SFCC", "SFRA", "Node.js", "REST APIs"];
+
+const skillGroups = [
+  {
+    title: "Front-End Technologies",
+    accent: "01",
+    skills: [
+      "React.js",
+      "Angular",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SCSS",
+      "Bootstrap",
+      "Angular Material",
+      "jQuery"
+    ]
+  },
+  {
+    title: "Backend & Integration",
+    accent: "02",
+    skills: ["Node.js", "Express.js", "MongoDB", "REST APIs"]
+  },
+  {
+    title: "Frameworks & Platforms",
+    accent: "03",
+    skills: ["Salesforce Commerce Cloud (SFCC)", "SFRA", "PWA"]
+  },
+  {
+    title: "Operating Systems",
+    accent: "04",
+    skills: ["Windows", "macOS"]
+  }
+];
 
 const services = [
   {
@@ -57,13 +92,13 @@ export default function HomePage() {
           <div className="space-y-8">
             <div className="flex items-center gap-4">
               <span className="h-px w-24 bg-accent" />
-              <Badge>US Remote Frontend Architecture</Badge>
+              <Badge>Remote Frontend</Badge>
             </div>
             <div className="space-y-4">
               <p className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">
                 Hello<span className="text-accent">.</span>
               </p>
-              <h1 className="max-w-5xl font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl md:text-7xl">
+              <h1 className="max-w-5xl font-display text-5xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl">
                 I lead scalable ecommerce frontends that improve speed, conversion, and delivery confidence
               </h1>
               <p className="max-w-2xl text-base leading-8 text-muted md:text-lg">
@@ -103,7 +138,7 @@ export default function HomePage() {
         </section>
       </Container>
 
-      <div className="border-y border-line bg-surface py-5">
+      <div className="mt-20 border-y border-line bg-surface py-5">
         <Container>
           <div className="grid grid-cols-2 gap-4 text-sm font-semibold text-muted sm:grid-cols-4 lg:grid-cols-8">
             {skills.map((skill) => (
@@ -114,6 +149,10 @@ export default function HomePage() {
           </div>
         </Container>
       </div>
+
+      <Container className="pt-14">
+        <SkillsCollapsible groups={skillGroups} />
+      </Container>
 
       <Container className="pt-20">
         <section className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">

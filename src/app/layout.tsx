@@ -21,7 +21,7 @@ const body = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://frontend-lead-portfolio.vercel.app"),
+  metadataBase: new URL("https://www.ankitsuman.space"),
   title: {
     default: `${siteConfig.name} | Frontend Architecture Lead`,
     template: `%s | ${siteConfig.name}`

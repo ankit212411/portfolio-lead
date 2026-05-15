@@ -15,6 +15,7 @@ export const siteConfig = {
     { href: "/", label: "Home" },
     { href: "/case-studies", label: "Case Studies" },
     { href: "/projects", label: "Projects" },
+    { href: "/research/multi-agent-parallel-systems", label: "Research" },
     { href: "/contact", label: "Contact" },
     { href: "/demo-store", label: "Demo Store" }
   ] satisfies NavItem[]

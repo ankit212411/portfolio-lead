@@ -4,6 +4,7 @@ import { CartSidebarMount } from "@/components/layout/cart-sidebar-mount";
 import { ResearchDemoLauncher } from "@/components/layout/research-demo-launcher";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { AgentWorkbenchLauncher } from "@/features/agent-workbench";
 
 export function SiteFrame({ children }: PropsWithChildren) {
   return (
@@ -13,6 +14,7 @@ export function SiteFrame({ children }: PropsWithChildren) {
       <SiteFooter />
       <ResearchDemoLauncher />
       <CartSidebarMount />
+      <AgentWorkbenchLauncher />
     </>
   );
 }

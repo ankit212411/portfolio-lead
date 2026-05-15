@@ -3,41 +3,49 @@ import type { Product } from "@/types";
 export const products: Product[] = [
   {
     slug: "aurora-performance-jacket",
-    name: "Aurora Performance Jacket",
+    name: "Aurora Belted Performance Jacket",
     category: "Outerwear",
+    image: {
+      src: "/images/products/aurora-performance-jacket.webp",
+      alt: "Black belted performance jacket with high collar and sleeve pocket"
+    },
     price: 168,
-    description: "Lightweight shell built for travel days, cool-weather commutes, and elevated everyday wear.",
+    description: "Black insulated shell with a structured collar, belted waist, and polished cold-weather profile.",
     longDescription:
-      "The Aurora Performance Jacket blends technical utility with a cleaner retail silhouette. It is designed as the kind of hero product a modern DTC storefront would lead with: versatile, premium, and easy to merchandise across campaigns.",
-    highlights: ["Water-resistant finish", "Packable hood", "Two-way zipper", "Breathable lining"],
+      "The Aurora Belted Performance Jacket blends technical protection with a clean retail silhouette. It is designed as the kind of hero outerwear product a modern DTC storefront would lead with: premium, seasonal, and easy to merchandise across cold-weather campaigns.",
+    highlights: ["Water-resistant shell", "Belted waist", "High collar", "Sleeve utility pocket"],
     rating: 4.8,
     inventoryStatus: "In stock",
     specifications: [
-      { label: "Material", value: "Recycled nylon blend" },
-      { label: "Fit", value: "Regular fit" },
-      { label: "Weight", value: "520g" },
+      { label: "Material", value: "Technical nylon shell" },
+      { label: "Fit", value: "Structured regular fit" },
+      { label: "Closure", value: "Hidden front zip" },
       { label: "Care", value: "Machine wash cold" }
     ],
-    useCases: ["Travel capsule wardrobe", "Commute layering", "All-season transitional outerwear"],
+    useCases: ["Cold-weather commute", "Travel outerwear", "Premium winter campaign hero"],
     recommendations: ["atlas-knit-polo", "summit-trail-pack"],
-    accent: { from: "#111817", to: "#4f6f67", ink: "#f7fffb" },
+    accent: { from: "#111111", to: "#4f5558", ink: "#f8fbfb" },
     featured: true
   },
   {
     slug: "atlas-knit-polo",
-    name: "Atlas Knit Polo",
+    name: "Atlas Textured Knit Polo",
     category: "Tops",
+    image: {
+      src: "/images/products/atlas-knit-polo.jpg",
+      alt: "Tan textured short sleeve knit polo shirt"
+    },
     price: 84,
-    description: "Refined knit polo with enough structure for meetings and enough comfort for everyday rotation.",
+    description: "Textured tan knit polo with a refined open collar and structured rib trim.",
     longDescription:
-      "The Atlas Knit Polo is styled for a premium basics category. The product storytelling emphasizes versatility, texture, and a polished silhouette without overcomplicating the buying decision.",
-    highlights: ["Soft stretch knit", "Structured collar", "Clean placket", "Wrinkle-resistant"],
+      "The Atlas Textured Knit Polo is styled for a premium basics category. The product storytelling emphasizes knit texture, color versatility, and a polished silhouette without overcomplicating the buying decision.",
+    highlights: ["Textured knit", "Open collar", "Ribbed hem", "Soft cotton feel"],
     rating: 4.7,
     inventoryStatus: "In stock",
     specifications: [
-      { label: "Material", value: "Cotton-modal blend" },
+      { label: "Material", value: "Cotton knit blend" },
       { label: "Fit", value: "Tailored fit" },
-      { label: "Origin", value: "Responsibly sourced" },
+      { label: "Color", value: "Warm taupe" },
       { label: "Care", value: "Machine wash gentle" }
     ],
     useCases: ["Smart casual wardrobe", "Layering piece", "Day-to-night styling"],
@@ -47,13 +55,17 @@ export const products: Product[] = [
   },
   {
     slug: "harbor-tapered-chino",
-    name: "Harbor Tapered Chino",
+    name: "Harbor Khaki Tapered Chino",
     category: "Bottoms",
+    image: {
+      src: "/images/products/harbor-tapered-chino.jpg",
+      alt: "Folded khaki tapered chino with back pocket detail"
+    },
     price: 98,
-    description: "Modern everyday chino with just enough stretch and a cleaner ankle line for contemporary styling.",
+    description: "Khaki tapered chino with a clean folded presentation, stretch comfort, and everyday polish.",
     longDescription:
       "Harbor is positioned as a foundational wardrobe builder. The detail page leans on fit, fabric, and repeat-wear confidence, mirroring the kind of PDP structure that works well for conversion-focused apparel brands.",
-    highlights: ["Four-way stretch", "Garment-dyed finish", "Secure media pocket", "Soft brushed interior"],
+    highlights: ["Stretch twill", "Tapered leg", "Khaki finish", "Back welt pocket"],
     rating: 4.6,
     inventoryStatus: "Low stock",
     specifications: [
@@ -64,39 +76,47 @@ export const products: Product[] = [
     ],
     useCases: ["Daily uniform", "Travel packing", "Hybrid office wear"],
     recommendations: ["atlas-knit-polo", "ridge-everyday-tee"],
-    accent: { from: "#18212d", to: "#74869e", ink: "#f4f8ff" },
+    accent: { from: "#4a4439", to: "#b6a482", ink: "#fff8ef" },
     featured: true
   },
   {
     slug: "summit-trail-pack",
-    name: "Summit Trail Pack",
+    name: "Summit Bungee Trail Pack",
     category: "Accessories",
+    image: {
+      src: "/images/products/summit-trail-pack.webp",
+      alt: "White and gray trail backpack with front bungee cord"
+    },
     price: 132,
-    description: "Compact carry system with premium organization details for short trips and daily movement.",
+    description: "White and gray backpack with bungee storage, compact organization, and light trail utility.",
     longDescription:
-      "A high-margin accessories product that complements outerwear and travel capsules. It is designed to support recommendation modules and higher cart value scenarios.",
-    highlights: ["16L capacity", "Laptop sleeve", "Quick-access pocket", "Weather-resistant base"],
+      "A high-margin accessories product that complements outerwear and travel capsules. It is designed to support recommendation modules, bundle logic, and higher cart value scenarios.",
+    highlights: ["16L capacity", "Bungee storage", "Front zip pocket", "Lightweight shell"],
     rating: 4.9,
     inventoryStatus: "In stock",
     specifications: [
       { label: "Volume", value: "16 liters" },
-      { label: "Material", value: "Technical canvas" },
+      { label: "Material", value: "Ripstop polyester" },
       { label: "Laptop", value: "Fits up to 14-inch" },
       { label: "Warranty", value: "2 years" }
     ],
     useCases: ["Daily commute", "Weekend city trip", "Personal item carry"],
     recommendations: ["aurora-performance-jacket", "ridge-everyday-tee"],
-    accent: { from: "#172019", to: "#75806c", ink: "#f6fff1" }
+    accent: { from: "#dfe5e8", to: "#6f7d87", ink: "#f8fbfb" }
   },
   {
     slug: "ridge-everyday-tee",
-    name: "Ridge Everyday Tee",
+    name: "Ridge Graphic Everyday Tee",
     category: "Basics",
+    image: {
+      src: "/images/products/ridge-everyday-tee.webp",
+      alt: "Black graphic t-shirt with white mountain artwork on the back"
+    },
     price: 42,
-    description: "Heavyweight tee with a premium drape and durable collar retention for repeat wear.",
+    description: "Black heavyweight graphic tee with a bold mountain back print and everyday structure.",
     longDescription:
-      "A strong entry-price product that supports bundle-building and recommendation logic. The content structure highlights value and consistency rather than novelty.",
-    highlights: ["Heavyweight jersey", "Relaxed silhouette", "Pre-shrunk finish", "Reinforced collar"],
+      "A strong entry-price product that supports bundle-building and recommendation logic. The content structure highlights graphic detail, repeat-wear value, and easy add-to-cart confidence.",
+    highlights: ["Heavyweight jersey", "Back graphic", "Relaxed fit", "Reinforced collar"],
     rating: 4.5,
     inventoryStatus: "In stock",
     specifications: [
@@ -111,23 +131,27 @@ export const products: Product[] = [
   },
   {
     slug: "field-day-cap",
-    name: "Field Day Cap",
+    name: "Field Day Trucker Cap",
     category: "Accessories",
+    image: {
+      src: "/images/products/field-day-cap.webp",
+      alt: "Gray and white mesh trucker cap with field day patch"
+    },
     price: 36,
-    description: "Minimal six-panel cap with a soft structure and tonal detailing.",
+    description: "Gray and white trucker cap with mesh panels, rope trim, and a field-day patch.",
     longDescription:
       "A low-friction add-on item intended to demonstrate quick-cart behaviors and simple recommendation pathways within the storefront.",
-    highlights: ["Washed twill", "Adjustable back strap", "Light structure", "Tonal embroidery"],
+    highlights: ["Mesh back", "Patch detail", "Rope trim", "Adjustable strap"],
     rating: 4.4,
     inventoryStatus: "In stock",
     specifications: [
-      { label: "Material", value: "Washed cotton twill" },
-      { label: "Profile", value: "Low profile" },
-      { label: "Adjustment", value: "Metal strapback" },
+      { label: "Material", value: "Cotton twill and mesh" },
+      { label: "Profile", value: "Structured mid profile" },
+      { label: "Adjustment", value: "Snapback" },
       { label: "Care", value: "Spot clean" }
     ],
     useCases: ["Everyday accessory", "Travel styling", "Impulse add-on"],
     recommendations: ["ridge-everyday-tee", "summit-trail-pack"],
-    accent: { from: "#2f2725", to: "#9a8178", ink: "#fff6f2" }
+    accent: { from: "#223449", to: "#aeb6bd", ink: "#f8fbfb" }
   }
 ];

@@ -14,6 +14,7 @@
   --accent-soft: #321d20;
   --sand: #172b36;
   --deep: #08131a;
+  --page-start: #08131a;
   --deep-ink: #f8fbfb;
   --deep-muted: #91a2ab;
   --on-ink: #0d1a22;
@@ -21,6 +22,11 @@
   --on-ink-line: rgba(13, 26, 34, 0.16);
   --on-ink-surface: rgba(13, 26, 34, 0.08);
   --grid: rgba(248, 251, 251, 0.035);
+  --body-background:
+    radial-gradient(circle at 72% 8%, rgba(255, 113, 95, 0.18), transparent 22rem),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--page-start) 0%, var(--canvas) 44%, var(--canvas) 100%);
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.32);
   --shadow-crisp: 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -37,6 +43,7 @@
   --accent-soft: #fff0ed;
   --sand: #f0ebe5;
   --deep: #10212b;
+  --page-start: #fbf8f3;
   --deep-ink: #fbfbf8;
   --deep-muted: #a9b8c1;
   --on-ink: #fbfbf8;
@@ -44,6 +51,12 @@
   --on-ink-line: rgba(255, 255, 255, 0.14);
   --on-ink-surface: rgba(255, 255, 255, 0.07);
   --grid: rgba(18, 23, 26, 0.045);
+  --body-background:
+    radial-gradient(circle at 78% 7%, rgba(255, 111, 92, 0.2), transparent 22rem),
+    radial-gradient(circle at 12% 12%, rgba(16, 33, 43, 0.1), transparent 24rem),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(180deg, #fff8f1 0%, #f8f1e9 36%, var(--canvas) 100%);
   --shadow-soft: 0 18px 45px rgba(18, 23, 26, 0.12);
   --shadow-crisp: 0 1px 0 rgba(18, 23, 26, 0.08);
 }
@@ -59,11 +72,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-    linear-gradient(180deg, var(--deep) 0%, var(--canvas) 44%, var(--canvas) 100%);
-  background-size: 56px 56px, 56px 56px, auto;
+  background: var(--body-background);
+  background-size: auto, auto, 56px 56px, 56px 56px, auto;
   color: var(--ink);
   transition: background-color 200ms ease, color 200ms ease;
 }
@@ -99,5 +109,39 @@ img {
   .text-contained {
     overflow-wrap: anywhere;
     word-break: normal;
+  }
+
+  .skill-marquee {
+    position: relative;
+    overflow: hidden;
+    padding-block: 0.25rem;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  .skill-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 0.75rem;
+    animation: skill-scroll 32s linear infinite;
+  }
+
+  .skill-marquee-track-reverse {
+    animation-direction: reverse;
+    animation-duration: 38s;
+  }
+
+  .skill-marquee:hover .skill-marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes skill-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
   }
 }

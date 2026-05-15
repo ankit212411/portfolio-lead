@@ -24,6 +24,7 @@ type CartContextValue = CartState & {
   openCart: () => void;
   closeCart: () => void;
   toggleCart: () => void;
+  clearCart: () => void;
   subtotal: number;
   itemCount: number;
 };
@@ -35,7 +36,8 @@ type CartAction =
   | { type: "decrement"; payload: string }
   | { type: "open" }
   | { type: "close" }
-  | { type: "toggle" };
+  | { type: "toggle" }
+  | { type: "clear" };
 
 const STORAGE_KEY = "frontend-lead-demo-cart";
 
@@ -92,6 +94,8 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return { ...state, isOpen: false };
     case "toggle":
       return { ...state, isOpen: !state.isOpen };
+    case "clear":
+      return { ...state, isOpen: false, items: [] };
     default:
       return state;
   }
@@ -143,7 +147,8 @@ export function CartProvider({ children }: PropsWithChildren) {
       decrementItem: (slug) => dispatch({ type: "decrement", payload: slug }),
       openCart: () => dispatch({ type: "open" }),
       closeCart: () => dispatch({ type: "close" }),
-      toggleCart: () => dispatch({ type: "toggle" })
+      toggleCart: () => dispatch({ type: "toggle" }),
+      clearCart: () => dispatch({ type: "clear" })
     };
   }, [state]);
 

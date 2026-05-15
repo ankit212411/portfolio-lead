@@ -45,10 +45,17 @@ export type ProductAccent = {
   ink: string;
 };
 
+export type ProductImage = {
+  src: string;
+  alt: string;
+  position?: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
   category: string;
+  image: ProductImage;
   price: number;
   description: string;
   longDescription: string;
@@ -68,4 +75,25 @@ export type Product = {
 export type CartItem = {
   product: Product;
   quantity: number;
+};
+
+export type CheckoutDetails = {
+  email: string;
+  fullName: string;
+  address: string;
+  city: string;
+  region: string;
+  postalCode: string;
+  deliveryMethod: "standard" | "express";
+};
+
+export type DemoOrder = {
+  id: string;
+  createdAt: string;
+  items: CartItem[];
+  customer: CheckoutDetails;
+  subtotal: number;
+  shipping: number;
+  tax: number;
+  total: number;
 };
